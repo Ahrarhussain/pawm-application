@@ -1,22 +1,23 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from './Components/HomePage';
 import AssetListPage from './Components/AssetListPage';
 import AssetCard from './Components/AssetCard';
 import AssetDetailsPage from './Components/AssetDetailsPage';
+import Login from './Components/Login';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route index element={<HomePage />} />
+        <Route exact path="/" element={<Login />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/AssetList" element={<AssetListPage />} />
-        <Route exact path="/AssetList/AssetCard" element={<AssetCard />} />
-        <Route exact path="/AssetDetails" element={<AssetDetailsPage />} />
+        <Route path="/AssetList/AssetCard" element={<AssetCard />} />
+        <Route path="/AssetDetails" element={<AssetDetailsPage />} />
       </Routes>
-    </BrowserRouter>
-    // <h1>something is rendering</h1>
+    </Router>
   );
 }
 
