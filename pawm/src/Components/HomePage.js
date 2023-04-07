@@ -18,30 +18,28 @@ export function HomePage() {
             <Box align="center" pad={{top:"medium"}}>
                 <Text weight="bold" size="xlarge">Home Page</Text>
             </Box>
-            <Box pad={{top:"small"}}>
-                <Box
-                    align="left"
-                    background="#CCCCCC"
-                    //alignContent="right"
-                    height="xxsmall"
-                    justify="right"
-                    
-                >
+            <Box direction="row" pad={{top:"small"}} background="grey">
+                <Box pad="small" margin="small" round="small" background="white">
+                        <Button
+                            align="right"
+                            //alignSelf="end"
+                            size="small"
+                            a11yTitle={`User`}
+                            icon={<User />}
+                            color="Black"
+                            onClick= {navigateToAssetDetails}
+
+                        />
+
+                        <Routes>
+                            <Route path="/AssetDetails" element={<AssetDetailsPage />} />
+                        </Routes>
+                </Box>
+                <Box pad="small" margin="small">
+                    <Text> user_name to be fetched </Text>
+                </Box>
                 
-                <Button
-                    align="right"
-                    //alignSelf="end"
-                    size="small"
-                    a11yTitle={`User`}
-                    icon={<User />}
-                    color="Black"
-                    onClick= {navigateToAssetDetails}
-
-                />
-
-                <Routes>
-                    <Route path="/AssetDetails" element={<AssetDetailsPage />} />
-                </Routes>
+                
             </Box>
             <Box
                 direction="row"
@@ -59,7 +57,6 @@ export function HomePage() {
                 </Box>
 
             </Box>
-        </Box>
         </Box>
         
        
