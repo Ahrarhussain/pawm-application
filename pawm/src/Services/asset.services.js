@@ -17,7 +17,7 @@ class AssetDataService {
     };
 
     updateAsset = (id, updatedAsset) => {
-        const assetDoc = doc(db, "aseets", id);
+        const assetDoc = doc(db, "assets", id);
         return updateDoc(assetDoc, updatedAsset);
     };
 
