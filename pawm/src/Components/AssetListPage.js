@@ -1,7 +1,7 @@
 import React from "react";
 import AssetCard from "./AssetCard";
 
-function AssetListPage(){
+export function AssetListPage(){
     return(
         // render multiple asset cards using map function
         // <AssetCard></AssetCard>
@@ -9,4 +9,3 @@ function AssetListPage(){
     );
 }
 
-export default AssetListPage;

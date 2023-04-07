@@ -5,7 +5,7 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
 
 
-function HomePage() {
+export function HomePage() {
     const navigate = useNavigate();
 
     const navigateToAssetDetails = () => {
@@ -18,21 +18,23 @@ function HomePage() {
             <Box align="center" pad={{top:"medium"}}>
                 <Text weight="bold" size="xlarge">Home Page</Text>
             </Box>
-            <Box pad={{top:"small"}} display="flex">
+            <Box pad={{top:"small"}}>
                 <Box
-                    direction="row"
+                    align="left"
                     background="#CCCCCC"
-                    alignContent="right"
+                    //alignContent="right"
                     height="xxsmall"
                     justify="right"
                     
                 >
                 
                 <Button
-                    alignSelf="end"
+                    align="right"
+                    //alignSelf="end"
                     size="small"
                     a11yTitle={`User`}
                     icon={<User />}
+                    color="Black"
                     onClick= {navigateToAssetDetails}
 
                 />
@@ -66,4 +68,3 @@ function HomePage() {
     );
 }
 
-export default HomePage;

@@ -6,7 +6,7 @@ import { auth, db, logout } from "../firebase.config";
 import { query, collection, getDocs, where } from "firebase/firestore";
 
 
-function Dashboard() {
+export function Dashboard() {
   const [user, loading, error] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
@@ -42,4 +42,3 @@ function Dashboard() {
      </div>
   );
 }
-export default Dashboard;
