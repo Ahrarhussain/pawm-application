@@ -38,9 +38,7 @@ export function HomePage() {
 
                         />
 
-                        <Routes>
-                            <Route path="/AssetDetails" element={<AssetDetailsPage />} />
-                        </Routes>
+                        
                 </Box>
                 <Box pad="small" margin="small">
                     <Text> user_name to be fetched </Text>
@@ -80,6 +78,9 @@ export function HomePage() {
                                 onClick= {navigateToAssetDetails}
                                 hoverIndicator={{backgound:"blue"}}
                             />
+                            <Routes>
+                                <Route path="/AssetDetails" element={<AssetDetailsPage />} />
+                            </Routes>
                         </Box>    
                         <Box size="medium" background="blue">
                             <Text>Asset List field</Text>
