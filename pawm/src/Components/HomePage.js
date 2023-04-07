@@ -4,6 +4,7 @@ import {User, PieChart, Home} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
 import { PieUI } from "./PieUI";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export function HomePage() {
@@ -59,22 +60,21 @@ export function HomePage() {
                 
                 
             </Box>
-            <Box
-                direction="row"
-                align="center">
-                <Box size="large" align="left" margin={{right:"small"}}background="grey" flex="0.75">
+            <div className="row">
+                <div className="col-6">
                     <PieUI />
-                </Box>
-                <Box direction="column" flex="0.25">
-                    <Box size="medium" background="green" fill={{vertical:true}}>
-                        <Text>Asset top column field</Text>
+                </div>
+                <div className="col-6">
+                    <Box direction="column" flex="0.25">
+                        <Box size="medium" background="green" fill={{vertical:true}}>
+                            <Text>Asset top column field</Text>
+                        </Box>
+                        <Box size="medium" background="blue">
+                            <Text>Asset List field</Text>
+                        </Box>
                     </Box>
-                    <Box size="medium" background="blue">
-                        <Text>Asset List field</Text>
-                    </Box>
-                </Box>
-
-            </Box>
+                </div>
+            </div>
         </Box>
         
        

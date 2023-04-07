@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {CanvasJSChart} from 'canvasjs-react-charts'
 
-export function PieUI() {
+export function PieUI () {
 	const options = {
 		theme: "dark2",
 		animationEnabled: true,
