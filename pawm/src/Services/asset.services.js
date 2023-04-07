@@ -11,7 +11,7 @@ import {
 } from 'firebase/firestore';
 
 const assetCollectionRef = collection(db, "assets");
-class AssetDataService {
+export class AssetDataService {
     
     addAsset = (newAsset) => {
         return addDoc(assetCollectionRef, newAsset);
