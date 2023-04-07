@@ -3,6 +3,7 @@ import {Box,Page, Text, Header, Button} from "grommet";
 import {User, PieChart, Home} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
+import { PieUI } from "./PieUI";
 
 
 export function HomePage() {
@@ -62,7 +63,7 @@ export function HomePage() {
                 direction="row"
                 align="center">
                 <Box size="large" align="left" margin={{right:"small"}}background="grey" flex="0.75">
-                    <Text>PieChart</Text>
+                    <PieUI />
                 </Box>
                 <Box direction="column" flex="0.25">
                     <Box size="medium" background="green" fill={{vertical:true}}>
