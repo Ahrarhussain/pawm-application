@@ -1,31 +1,3 @@
-// import React from 'react';
-// import { PieChart, Pie, Legend} from 'recharts';
-// import '../Styles/PieUI.css';
-
-
-// export function PieUI() {
-
-//     // Sample data
-//     // fetching dynamic data
-//     // assetName: assets?.assetName
-//     const data = [
-//         {assetName: 'Reliance', totalAssetValue: 36000, fill: '#32EE00'},
-//         {assetName: 'Adhani', totalAssetValue: 24000, fill: '#EAEE00'},
-//         {assetName: 'Gold', totalAssetValue: 100000, fill: '#085C00'},
-//         {assetName: 'Bitcoin', totalAssetValue: 50000, fill: '#EE6900'}
-//     ];
-
-//     return (
-//             <div className='pieUI'>
-//                 <PieChart width={500} height={500}>
-//                     <Legend layout="vertical" verticalAlign="middle" align="right" />
-//                     <Pie data={data} dataKey="totalAssetValue" outerRadius={250} />
-//                 </PieChart>
-//             </div>
-//     );
-// }
-
-/* App.js */
 import React, { Component } from 'react';
 import {CanvasJSChart} from 'canvasjs-react-charts'
 
