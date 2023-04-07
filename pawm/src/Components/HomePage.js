@@ -1,22 +1,45 @@
 import React from "react";
 import {Box,Page, Text, Header, Button} from "grommet";
 import {User, PieChart} from "grommet-icons";
-import { Navigate } from "react-router-dom";
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import {AssetDetailsPage} from './AssetDetailsPage';
+
 
 function HomePage() {
+    const navigate = useNavigate();
+
+    const navigateToAssetDetails = () => {
+        // 👇️ navigate to /AssetDetails
+        navigate('./AssetDetailsPage');
+    };
+
     return(
-        <div>
-        <Box pad={{top:"small"}} display="flex">
-            <Box
-                direction="row"
-                background="#CCCCCC"
-                alignContent="right"
-                height="xxsmall"
-                justify="right"
-                
+        <Box direction="column">
+            <Box align="center" pad={{top:"medium"}}>
+                <Text weight="bold" size="xlarge">Home Page</Text>
+            </Box>
+            <Box pad={{top:"small"}} display="flex">
+                <Box
+                    direction="row"
+                    background="#CCCCCC"
+                    alignContent="right"
+                    height="xxsmall"
+                    justify="right"
+                    
                 >
                 
-                <Button><User color="black" align="center" round="small" size="large"/></Button>
+                <Button
+                    alignSelf="end"
+                    size="small"
+                    a11yTitle={`User`}
+                    icon={<User />}
+                    onClick= {navigateToAssetDetails}
+
+                />
+
+                <Routes>
+                    <Route path="/AssetDetails" element={<AssetDetailsPage />} />
+                </Routes>
             </Box>
             <Box
                 direction="row"
@@ -35,7 +58,9 @@ function HomePage() {
 
             </Box>
         </Box>
-        </div>
+        </Box>
+        
+       
         
         
     );

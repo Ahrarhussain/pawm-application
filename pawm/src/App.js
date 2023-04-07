@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from './Components/HomePage';
 import AssetListPage from './Components/AssetListPage';
 import AssetCard from './Components/AssetCard';
-import AssetDetailsPage from './Components/AssetDetailsPage';
+import {AssetDetailsPage} from './Components/AssetDetailsPage';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import Reset from './Components/Reset';
