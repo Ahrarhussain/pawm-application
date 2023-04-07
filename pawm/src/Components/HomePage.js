@@ -1,6 +1,6 @@
 import React from "react";
 import {Box,Page, Text, Header, Button} from "grommet";
-import {User, PieChart} from "grommet-icons";
+import {User, PieChart, Home} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
 
@@ -12,6 +12,10 @@ export function HomePage() {
         // 👇️ navigate to /AssetDetails
         navigate('./AssetDetailsPage');
     };
+    const navigateHome = () => {
+        // 👇️ navigate to /
+        navigate('/');
+      };
 
     return(
         <Box direction="column">
@@ -38,6 +42,19 @@ export function HomePage() {
                 <Box pad="small" margin="small">
                     <Text> user_name to be fetched </Text>
                 </Box>
+
+                {/* <Box align="right" pad="small">
+                    <Button
+                        align="right"
+                        //alignSelf="end"
+                        size="small"
+                        a11yTitle={`Home`}
+                        icon={<Home />}
+                        color="Black"
+                        onClick={navigateHome}
+
+                    />
+                </Box> */}
                 
                 
             </Box>
