@@ -9,20 +9,20 @@ import {
     doc,
 } from 'firebase/firestore';
 
-const assetCollectionRef = collection(db, "pawm");
+const assetCollectionRef = collection(db, "assets");
 class AssetDataService {
     
-    addAssets = (newAsset) => {
+    addAsset = (newAsset) => {
         return addDoc(assetCollectionRef, newAsset);
     };
 
     updateAsset = (id, updatedAsset) => {
-        const assetDoc = doc(db, "pawm", id);
+        const assetDoc = doc(db, "assets", id);
         return updateDoc(assetDoc, updatedAsset);
     };
 
     deleteAsset = (id) => {
-        const assetDoc = doc(db, "pawm", id);
+        const assetDoc = doc(db, "assets", id);
         return deleteDoc(assetDoc);
     };
 
@@ -31,7 +31,7 @@ class AssetDataService {
     }
 
     getBook = (id) => {
-        const assetDoc = doc(db, "pawm", id);
+        const assetDoc = doc(db, "assets", id);
         return getDoc(assetDoc);
     }
 }
