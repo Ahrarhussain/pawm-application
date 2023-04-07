@@ -4,6 +4,7 @@ import {User, AddCircle, PieChart, Home} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
 import { PieUI } from "./PieUI";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export function HomePage() {
@@ -60,14 +61,16 @@ export function HomePage() {
                 
                 
             </Box>
-            <Box
-                direction="row"
-                align="center">
+            <div className="row">
                 
-                <Box direction="column" align="right">
-                    <Box size="medium" background="white" fill={{vertical:true}} direction="row" pad="small" margin="medium">
-                        <Text pad="small"> Add Asset </Text>
-                        <Button
+                <div className="col-6">
+                    <PieUI />
+                </div>
+                <div className="col-6">
+                    <Box direction="column" align="right">
+                        <Box size="medium" background="white" fill={{vertical:true}} direction="row" pad="small" margin="medium">
+                            <Text pad="small"> Add Asset </Text>
+                            <Button
                                 align="right"
                                 //alignSelf="end"
                                 size="small"
@@ -76,20 +79,15 @@ export function HomePage() {
                                 color="Black"
                                 onClick= {navigateToAssetDetails}
                                 hoverIndicator={{backgound:"blue"}}
-
-
-                        />
+                            />
+                        </Box>    
+                        <Box size="medium" background="blue">
+                            <Text>Asset List field</Text>
+                        </Box>
                     </Box>
-                    <Box size="medium" background="blue">
-                        <Text>Asset List field</Text>
-                    </Box>
-                </Box>
-
-                <Box size="large" align="left" margin={{right:"small"}}background="grey" flex="0.75">
-                    <PieUI />
-                </Box>
-
-            </Box>
+                </div>
+            </div>
+            
         </Box>
         
        
