@@ -1,6 +1,6 @@
 import React from "react";
 import {Box,Page, Text, Header, Button} from "grommet";
-import {User, PieChart, Home} from "grommet-icons";
+import {User, AddCircle, PieChart, Home} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
 
@@ -31,7 +31,8 @@ export function HomePage() {
                             a11yTitle={`User`}
                             icon={<User />}
                             color="Black"
-                            onClick= {navigateToAssetDetails}
+                            //onClick= {navigateToAssetDetails}
+                            hoverIndicator={{color:"#6FFFB0"}}
 
                         />
 
@@ -65,8 +66,20 @@ export function HomePage() {
                     <Text>PieChart</Text>
                 </Box>
                 <Box direction="column" flex="0.25">
-                    <Box size="medium" background="green" fill={{vertical:true}}>
-                        <Text>Asset top column field</Text>
+                    <Box size="medium" background="white" fill={{vertical:true}} direction="row" pad="small" transition="navigation" margin="medium">
+                        <Text pad="small"> Add Asset </Text>
+                        <Button
+                                align="right"
+                                //alignSelf="end"
+                                size="small"
+                                a11yTitle={`User`}
+                                icon={<AddCircle />}
+                                color="Black"
+                                onClick= {navigateToAssetDetails}
+                                hoverIndicator={{backgound:"blue"}}
+
+
+                        />
                     </Box>
                     <Box size="medium" background="blue">
                         <Text>Asset List field</Text>
