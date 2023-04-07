@@ -10,7 +10,7 @@ export function HomePage() {
 
     const navigateToAssetDetails = () => {
         // 👇️ navigate to /AssetDetails
-        navigate('./AssetDetailsPage');
+        navigate('/AssetDetails');
     };
     const navigateHome = () => {
         // 👇️ navigate to /
