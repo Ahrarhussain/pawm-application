@@ -32,6 +32,6 @@ class AssetDataService {
 
     getBook = (id) => {
         const assetDoc = doc(db, "pawm", id);
-        return getDoc(assetDoc);
+        return getDocs(assetDoc);
     }
 }
