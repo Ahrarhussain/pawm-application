@@ -63,10 +63,8 @@ export function HomePage() {
             <Box
                 direction="row"
                 align="center">
-                <Box size="large" align="left" margin={{right:"small"}}background="grey" flex="0.75">
-                    <PieUI />
-                </Box>
-                <Box direction="column">
+                
+                <Box direction="column" align="right">
                     <Box size="medium" background="white" fill={{vertical:true}} direction="row" pad="small" margin="medium">
                         <Text pad="small"> Add Asset </Text>
                         <Button
@@ -85,6 +83,10 @@ export function HomePage() {
                     <Box size="medium" background="blue">
                         <Text>Asset List field</Text>
                     </Box>
+                </Box>
+
+                <Box size="large" align="left" margin={{right:"small"}}background="grey" flex="0.75">
+                    <PieUI />
                 </Box>
 
             </Box>
