@@ -7,7 +7,7 @@ import { sendPasswordResetEmail } from "firebase/auth";
 import "../Styles/Reset.css";
 
 
-function Reset() {
+export function Reset() {
   const [email, setEmail] = useState("");
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
@@ -38,4 +38,3 @@ function Reset() {
     </div>
   );
 }
-export default Reset;

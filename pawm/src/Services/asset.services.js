@@ -32,6 +32,6 @@ class AssetDataService {
 
     getAssetById = (id) => {
         const assetDoc = doc(db, "assets", id);
-        return getDoc(assetDoc);
+        return getDocs(assetDoc);
     }
 }

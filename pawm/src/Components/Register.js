@@ -9,7 +9,7 @@ import {
 import "../Styles/Register.css";
 
 
-function Register() {
+export function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -63,4 +63,3 @@ function Register() {
     </div>
   );
 }
-export default Register;
