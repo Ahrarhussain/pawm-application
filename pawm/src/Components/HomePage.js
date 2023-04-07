@@ -1,5 +1,7 @@
 import React from "react";
 
+import { PieUI } from "./PieUI";
+
 function HomePage() {
     return(
         
