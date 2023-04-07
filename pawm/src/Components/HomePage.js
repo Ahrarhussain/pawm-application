@@ -66,8 +66,8 @@ export function HomePage() {
                 <Box size="large" align="left" margin={{right:"small"}}background="grey" flex="0.75">
                     <PieUI />
                 </Box>
-                <Box direction="column" flex="0.25">
-                    <Box size="medium" background="white" fill={{vertical:true}} direction="row" pad="small" transition="navigation" margin="medium">
+                <Box direction="column">
+                    <Box size="medium" background="white" fill={{vertical:true}} direction="row" pad="small" margin="medium">
                         <Text pad="small"> Add Asset </Text>
                         <Button
                                 align="right"
