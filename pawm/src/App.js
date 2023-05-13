@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/reset" element={<Reset />} />
         <Route exact path="/dashboard" element={<Dashboard />} />
         <Route path="/HomePage" element={<HomePage />} />
-        <Route path="/AssetList" element={<AssetListPage />} />
+        <Route path="/AssetListPage" element={<AssetListPage />} />
         <Route path="/AssetList/AssetCard" element={<AssetCard />} />
         <Route path="/AssetDetails" element={<AssetDetailsPage />} />
       </Routes>

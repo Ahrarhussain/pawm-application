@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import {CanvasJSChart} from 'canvasjs-react-charts'
+import grommet from "grommet"
 
 export function PieUI () {
 	const options = {
 		theme: "dark2",
 		animationEnabled: true,
+		round:"small",
 		data: [{
 			type: "pie",
 			legendText: "{label}",
@@ -12,6 +14,8 @@ export function PieUI () {
 			toolTipContent: "{label}: Rs. {y}",
 			indexLabel: "#percent%",
 			indexLabelPlacement: "inside",
+			outerRadius:"160px",
+			innerRadius:"90px",
 			showInLegend: true,
 			dataPoints: [
 				{ y: 36000, label: "Reliance", color: '#30D400'},
