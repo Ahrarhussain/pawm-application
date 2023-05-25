@@ -1,13 +1,16 @@
 import React from "react";
-import {Box,Page, Text, Header, Button} from "grommet";
+import {Box,Page, Text, Header, Button, Image} from "grommet";
 import {User, AddCircle, PieChart, Home} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
+import {AssetListPage} from './AssetListPage';
 import { PieUI } from "./PieUI";
 import {AssetList} from './AssetList'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RePieChart } from "./RePieChart";
 import {AssetListTable} from "./AssetListTable";
+
+import {homepageBackground} from "../Images/homepageBackground.png";
 
 export function HomePage() {
     const navigate = useNavigate();
@@ -16,14 +19,30 @@ export function HomePage() {
         // 👇️ navigate to /AssetDetails
         navigate('/AssetDetails');
     };
+    const navigateToAssetListPage = () => {
+        // 👇️ navigate to /AssetDetails
+        navigate('/AssetListPage');
+    };
     const navigateHome = () => {
         // 👇️ navigate to /
         navigate('/');
       };
 
     return(
-        
-            <Box direction="column" background="#FEDB74" scroll="overflow">
+            <Box 
+            direction="column" 
+            background="#FEDB74" 
+            scroll="overflow" 
+            style = {{
+                width:"100%",
+                height: "auto",
+                background:{homepageBackground},
+                backgroundSize:"contain",
+                backgroundRepeat:"no-repeat",
+                //opacity:"0.6",
+            }}
+            
+            >
             <Box align="center" pad={{top:"medium", bottom:"medium"}} elevation="large" >
                 <Text weight="bold" size="xlarge" color="black">Home Page</Text>
             </Box>
@@ -105,6 +124,16 @@ export function HomePage() {
             </Box>
             <Box margin="xsmall" pad="xsmall" round="small" background="">
                 <AssetListTable />
+            </Box>
+            <Box margin={{top:"small", bottom:"large"}}>
+                <Button
+                    label="Asset List"
+                    onClick = {navigateToAssetListPage}
+                    primary
+                />
+                <Routes>
+                    <Route path="/AssetListPage" element={<AssetListPage />} />
+                </Routes>
             </Box>
             { /* <div className="row">
                 

@@ -16,49 +16,60 @@ import {
   Toolbar,
 } from 'grommet';
 
+//Mock data import
+//import {AllData} from "./AllData.js"
+
+
 const COLUMNS = [
-  { property: 'nameOfAsset', header: 'Name', primary: true, pin: true },
-  { property: 'categoryOfAsset', header: 'Category' },
-  { property: 'statusOfAsset', header: 'Status' },
+  { property: 'assetName', header: 'Name', primary: true, pin: true },
+  { property: 'assetType', header: 'Category' },
+  { property: 'assetStatus', header: 'Status' },
   { property: 'totalQuantity', header: 'Quantity' },
-  { property: 'totalValueInAsset', header: 'Value In Asset', align: 'end' },
+  { property: 'valuePerUnit', header: 'Value Per Unit'},
+  { property: 'assetTotalValue', header: 'Value In Asset', align: 'end' },
 ];
+
 
 const allData = [
   {
-    nameOfAsset: 'Real Estate',
-    categoryOfAsset: 'Physical Asset',
-    statusOfAsset: 'Stable',
+    assetName: 'Real Estate',
+    assetType: 'Physical Asset',
+    assetStatus: 'Stable',
     totalQuantity: '37 acres',
-    totalValueInAsset: '47,000$',  
+    valuePerUnit: '123',
+    assetTotalValue: '47,000$',  
   },
   {
-    nameOfAsset: 'Gold',
-    categoryOfAsset: 'Physical Asset',
-    statusOfAsset: 'Stable',
+    assetName: 'Gold',
+    assetType: 'Physical Asset',
+    assetStatus: 'Stable',
     totalQuantity: '5 kg',
-    totalValueInAsset: '77,000$',  
+    valuePerUnit: '123',
+    assetTotalValue: '77,000$',  
   },
   {
-    nameOfAsset: 'Adhani Power',
-    categoryOfAsset: 'Shares',
-    statusOfAsset: 'Towards Stability',
+    assetName: 'Adhani Power',
+    assetType: 'Shares',
+    assetStatus: 'Towards Stability',
     totalQuantity: '900',
-    totalValueInAsset: '8,000$',  
+    valuePerUnit: '123',
+    assetTotalValue: '8,000$',  
   },
   {
-    nameOfAsset: 'Ambani Oil',
-    categoryOfAsset: 'Shares',
-    statusOfAsset: 'Good',
+    assetName: 'Ambani Oil',
+    assetType: 'Shares',
+    assetStatus: 'Good',
     totalQuantity: '1500',
-    totalValueInAsset: '27,000$',  
+    valuePerUnit: '123',
+    assetTotalValue: '27,000$',  
   },
   {
-    nameOfAsset: 'Bitcoin',
-    categoryOfAsset: 'Crypto',
-    statusOfAsset: 'Bad',
+    assetName: 'Bitcoin',
+    assetType: 'Crypto',
+    assetStatus: 'Bad',
     totalQuantity: '100',
-    totalValueInAsset: '1,700,000$',  
+    valuePerUnit: '123',
+    assetTotalValue: '1,700,000$',  
   },
   
 ];
@@ -104,6 +115,7 @@ export const AssetListTable = () => (
 const Results = () => {
   const [select, setSelect] = useState([]);
   const properties = buildProperties();
+  //const [allData, setAllData] = useState([AllData]);
   return (
     <Data data={allData} flex properties={properties}>
       <Toolbar>
