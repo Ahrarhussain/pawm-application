@@ -21,7 +21,10 @@ return (
           dataKey="students" 
           outerRadius={160} 
           innerRadius={90} 
+          margin={{left:"large"}}
+          align="center"
           fill="green" />
+          
         </PieChart>
 );
 }

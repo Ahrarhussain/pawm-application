@@ -1,5 +1,5 @@
 import React from "react";
-import {Box,Page, Text, Header, Button, Image} from "grommet";
+import {Box,Page, Text, Header, Button, Image,Menu} from "grommet";
 import {User, AddCircle, PieChart, Home} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
@@ -9,7 +9,7 @@ import {AssetList} from './AssetList'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RePieChart } from "./RePieChart";
 import {AssetListTable} from "./AssetListTable";
-
+import {HeaderApp} from "./HeaderApp.js";
 import {homepageBackground} from "../Images/homepageBackground.png";
 
 export function HomePage() {
@@ -27,6 +27,7 @@ export function HomePage() {
         // 👇️ navigate to /
         navigate('/');
       };
+    let headerProp = 'Home Page';
 
     return(
             <Box 
@@ -41,47 +42,8 @@ export function HomePage() {
                 backgroundRepeat:"no-repeat",
                 //opacity:"0.6",
             }}
-            
             >
-            <Box align="center" pad={{top:"medium", bottom:"medium"}} elevation="large" >
-                <Text weight="bold" size="xlarge" color="black">Home Page</Text>
-            </Box>
-            <Box direction="row" pad={{top:"small"}} elevation="large" margin="small" round="small" background="#FFFFFF">
-                <Box pad="small" margin="small" round="small" background="black">
-                        <Button
-                            align="right"
-                            //alignSelf="end"
-                            size="small"
-                            round="large"
-                            a11yTitle={`User`}
-                            icon={<User />}
-                            color="Black"
-                            //onClick= {navigateToAssetDetails}
-                            hoverIndicator={{color:"#6FFFB0"}}
-
-                        />
-
-                        
-                </Box>
-                <Box pad="small" margin="small">
-                    <Text> user_name </Text>
-                </Box>
-
-                {/* <Box align="right" pad="small">
-                    <Button
-                        align="right"
-                        //alignSelf="end"
-                        size="small"
-                        a11yTitle={`Home`}
-                        icon={<Home />}
-                        color="Black"
-                        onClick={navigateHome}
-
-                    />
-                </Box> */}
-                
-                
-            </Box>
+            {<HeaderApp headerProp={headerProp}/> }
             <Box direction="row" >
                 <Box 
                     margin="small" 
@@ -91,6 +53,7 @@ export function HomePage() {
                     padding="small"
                     width="960px"
                     contain
+                    align="cneter"
                 >
                     <RePieChart />
                     {/* <PieUI /> */}
