@@ -40,6 +40,7 @@ const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 const auth = getAuth(app);
 // exporting config variable so that it is available to the different components
+//connecting db to firebase database
 const db = getFirestore(app);
 
 

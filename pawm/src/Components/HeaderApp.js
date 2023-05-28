@@ -9,22 +9,23 @@ export function HeaderApp (prop){
         <Box direction="row" pad={{top:"small"}} elevation="large" margin="small" round="small" background="black"> 
             <Header background="black" fontColor="white" round="small">
                 <Box pad="small" margin="small" round="small" background="black" elevation="small">
-                    <Button
-                        align="right"
-                        //alignSelf="end"
-                        size="small"
-                        round="large"
-                        a11yTitle={`User`}
-                        icon={<User />}
-                        color="black"
-                        //onClick= {navigateToAssetDetails}
-                        hoverIndicator={{color:"#6FFFB0"}}
+                <Button
+                    align="right"
+                    //alignSelf="end"
+                    size="small"
+                    round="large"
+                    a11yTitle={`User`}
+                    icon={<User />}
+                    color="black"
+                    //onClick= {navigateToAssetDetails}
+                    hoverIndicator={{color:"#6FFFB0"}}
 
-                    />
+                />
                 </Box>
                 <Button icon={<Home />} hoverIndicator />
-                <Menu items={[{ label: 'logout' }]} />
-                <Box align="center" width="large" pad={{left:"large", top:"medium", bottom:"medium"}}>
+                <Menu label="account" items={[{ label: 'logout'}]} />
+                
+                <Box align="center" width="large" pad={{left:"small", top:"medium", bottom:"medium"}}>
                     <Text weight="bold" size="xlarge" color="white">{headerValue}</Text>
                 </Box>
             </Header>

@@ -1,5 +1,5 @@
 // TableCustomizationExample.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   Data,
@@ -15,9 +15,10 @@ import {
   PageContent,
   Toolbar,
 } from 'grommet';
+import {AssetDataService} from "../Services/asset.services.js";
 
-//Mock data import
-//import {AllData} from "./AllData.js"
+
+const instanceValue= new AssetDataService();
 
 
 const COLUMNS = [
@@ -35,41 +36,41 @@ const allData = [
     assetName: 'Real Estate',
     assetType: 'Physical Asset',
     assetStatus: 'Stable',
-    totalQuantity: '37 acres',
-    valuePerUnit: '123',
-    assetTotalValue: '47,000$',  
+    totalQuantity: 37,
+    valuePerUnit: 123,
+    assetTotalValue: 47000,  
   },
   {
     assetName: 'Gold',
     assetType: 'Physical Asset',
     assetStatus: 'Stable',
-    totalQuantity: '5 kg',
-    valuePerUnit: '123',
-    assetTotalValue: '77,000$',  
+    totalQuantity: 5,
+    valuePerUnit: 123,
+    assetTotalValue: 77000,  
   },
   {
     assetName: 'Adhani Power',
     assetType: 'Shares',
     assetStatus: 'Towards Stability',
-    totalQuantity: '900',
-    valuePerUnit: '123',
-    assetTotalValue: '8,000$',  
+    totalQuantity: 900,
+    valuePerUnit: 123,
+    assetTotalValue: 8000,  
   },
   {
     assetName: 'Ambani Oil',
     assetType: 'Shares',
     assetStatus: 'Good',
-    totalQuantity: '1500',
-    valuePerUnit: '123',
-    assetTotalValue: '27,000$',  
+    totalQuantity: 1500,
+    valuePerUnit: 123,
+    assetTotalValue: 27000,  
   },
   {
     assetName: 'Bitcoin',
     assetType: 'Crypto',
     assetStatus: 'Bad',
-    totalQuantity: '100',
-    valuePerUnit: '123',
-    assetTotalValue: '1,700,000$',  
+    totalQuantity: 100,
+    valuePerUnit: 123,
+    assetTotalValue: 170000,  
   },
   
 ];
@@ -115,9 +116,19 @@ export const AssetListTable = () => (
 const Results = () => {
   const [select, setSelect] = useState([]);
   const properties = buildProperties();
-  //const [allData, setAllData] = useState([AllData]);
+  const [assetData, setAssetData] = useState([]);
+
+  useEffect(() => {
+    const getAssets = async () => {
+      const dataIs = await instanceValue.getAllAssets();
+      setAssetData(dataIs.docs.map((doc) => ({ ...doc.data(), id: doc.id})));
+    };
+
+    getAssets();
+  }, []);
+  
   return (
-    <Data data={allData} flex properties={properties}>
+    <Data data={assetData} flex properties={properties}>
       <Toolbar>
         <DataSearch responsive />
         <DataTableColumns drop options={options} />
