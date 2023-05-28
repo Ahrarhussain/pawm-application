@@ -30,50 +30,50 @@ const COLUMNS = [
   { property: 'assetTotalValue', header: 'Value In Asset', align: 'end' },
 ];
 
-
-const allData = [
-  {
-    assetName: 'Real Estate',
-    assetType: 'Physical Asset',
-    assetStatus: 'Stable',
-    totalQuantity: 37,
-    valuePerUnit: 123,
-    assetTotalValue: 47000,  
-  },
-  {
-    assetName: 'Gold',
-    assetType: 'Physical Asset',
-    assetStatus: 'Stable',
-    totalQuantity: 5,
-    valuePerUnit: 123,
-    assetTotalValue: 77000,  
-  },
-  {
-    assetName: 'Adhani Power',
-    assetType: 'Shares',
-    assetStatus: 'Towards Stability',
-    totalQuantity: 900,
-    valuePerUnit: 123,
-    assetTotalValue: 8000,  
-  },
-  {
-    assetName: 'Ambani Oil',
-    assetType: 'Shares',
-    assetStatus: 'Good',
-    totalQuantity: 1500,
-    valuePerUnit: 123,
-    assetTotalValue: 27000,  
-  },
-  {
-    assetName: 'Bitcoin',
-    assetType: 'Crypto',
-    assetStatus: 'Bad',
-    totalQuantity: 100,
-    valuePerUnit: 123,
-    assetTotalValue: 170000,  
-  },
+//Mock Data Used Earlier...Now realTime data is used.
+// const allData = [
+//   {
+//     assetName: 'Real Estate',
+//     assetType: 'Physical Asset',
+//     assetStatus: 'Stable',
+//     totalQuantity: 37,
+//     valuePerUnit: 123,
+//     assetTotalValue: 47000,  
+//   },
+//   {
+//     assetName: 'Gold',
+//     assetType: 'Physical Asset',
+//     assetStatus: 'Stable',
+//     totalQuantity: 5,
+//     valuePerUnit: 123,
+//     assetTotalValue: 77000,  
+//   },
+//   {
+//     assetName: 'Adhani Power',
+//     assetType: 'Shares',
+//     assetStatus: 'Towards Stability',
+//     totalQuantity: 900,
+//     valuePerUnit: 123,
+//     assetTotalValue: 8000,  
+//   },
+//   {
+//     assetName: 'Ambani Oil',
+//     assetType: 'Shares',
+//     assetStatus: 'Good',
+//     totalQuantity: 1500,
+//     valuePerUnit: 123,
+//     assetTotalValue: 27000,  
+//   },
+//   {
+//     assetName: 'Bitcoin',
+//     assetType: 'Crypto',
+//     assetStatus: 'Bad',
+//     totalQuantity: 100,
+//     valuePerUnit: 123,
+//     assetTotalValue: 170000,  
+//   },
   
-];
+// ];
 
 // Define data structure for DataTableColumns sorting
 const options = COLUMNS.map(({ header, property }) => ({

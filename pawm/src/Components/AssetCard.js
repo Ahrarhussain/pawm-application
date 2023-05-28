@@ -1,11 +1,44 @@
 import React from 'react';
-import { useState } from 'react';
-import {db} from '../firebase.config';
-import {collection, addDoc} from 'firebase/firestore';
+import {Box, Card, CardHeader,CardFooter, CardBody, Button} from 'grommet';
+import {Favorite, ShareOption, BarChart, FormTrash } from "grommet-icons";
 
-export function AssetCard() {
+export function AssetCard(prop) {
+    const name = prop.name;
+    const status = prop.status;
+    const totalValue = prop.totalValue;
+    const count=prop.count;
+    //count=count % 4;
     return(
-        <h1>THESE are the asset card components to be rendered</h1>
+        <>
+        {/* {(count == 0) ? ():()} */}
+        <Box direction="row" margin="medium" >
+            <Card  height="small" width="medium" background="light-1">
+                <CardHeader pad="medium">{name}</CardHeader>
+                <CardBody pad="medium">
+                    Status : {status} <br />
+                    Total Value : {totalValue}
+                </CardBody>
+                <CardFooter pad={{horizontal: "small"}} background="light-2">
+                    <Button
+                    icon={<Favorite color="red" />}
+                    hoverIndicator
+                    />
+                    <Button icon={<BarChart color="plain" />} hoverIndicator />
+                    <Button icon={<ShareOption color="plain" />} hoverIndicator />
+                    <Button
+                    icon={<FormTrash color="red" />}
+                    hoverIndicator
+                    />
+                </CardFooter>
+            </Card>
+
+        </Box>
+        </>
+        
+    
+        
     );
 }
+
+
 
