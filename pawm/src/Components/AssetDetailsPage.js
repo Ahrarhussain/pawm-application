@@ -10,6 +10,7 @@ import {
   Form,
   FormField,
   TextInput,
+  Select,
   List,
   Header,
   Menu,
@@ -29,7 +30,6 @@ function handleSubmit(value){
 export function AssetDetailsPage(){
     const [value,setValue] = React.useState({});
     const headerProp = "Asset Details Page";
-    
     return(
         <Box 
             background="#FEDB74" 
@@ -57,11 +57,22 @@ export function AssetDetailsPage(){
                         <FormField name="assetName" htmlFor="text-input-id" label="Asset Name">
                             <TextInput id="text-input-id" name="assetName" />
                         </FormField>
+                        
                         <FormField name="assetType" htmlFor="text-input-id" label="Type">
-                            <TextInput id="text-input-id" name="assetType" />
+                            <Select
+                                options={['Physical Asset', 'Shares', 'Crypto']}
+                                name="assetType"
+                                id="text-input-id"
+                            />
+                            
                         </FormField>
                         <FormField name="assetStatus" htmlFor="text-input-id" label="Status">
-                            <TextInput id="text-input-id" name="assetStatus" />
+                            <Select
+                                options={['Dark Green', 'Yellow', 'Red']}
+                                name="assetStatus"
+                                id="text-input-id"
+                            />
+                            
                         </FormField>
                         <FormField name="totalQuantity" htmlFor="number-input-id" label="Total Quantity">
                             <TextInput id="number-input-id" name="totalQuantity" type="number"/>

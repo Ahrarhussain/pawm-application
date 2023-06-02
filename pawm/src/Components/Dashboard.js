@@ -15,7 +15,7 @@ export function Dashboard() {
       //   const userRef = db.collection('users').doc(user.uid);
       //   const userDoc = await userRef.get();
       //   const data = userDoc.data();
-      const q = query(collection(db, "users"), where("uid", "==", user==null?"":user.uuid));
+      const q = query(collection(db, "users"), where("uid", "==", user==null?"":user.uid));
       const doc = await getDocs(q);
       const data = doc.docs[0].data();
       setName(data.name);
