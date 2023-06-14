@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {Box,Page, Text, Header, Button, Image,Menu} from "grommet";
 import {User, AddCircle, PieChart, Home} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
@@ -8,11 +8,28 @@ import { PieUI } from "./PieUI";
 import {AssetList} from './AssetList'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RePieChart } from "./RePieChart";
+import { PieGrommet } from "./PieGrommet";
 import {AssetListTable} from "./AssetListTable";
 import {HeaderApp} from "./HeaderApp.js";
 import {homepageBackground} from "../Images/homepageBackground.png";
 
+import {AssetDataService} from "../Services/asset.services.js";
+
+
+const instanceValue= new AssetDataService();
+
 export function HomePage() {
+    const [assetData, setAssetData] = useState([]);
+
+    useEffect(() => {
+        const getAssets = async () => {
+        const dataIs = await instanceValue.getAllAssets();
+        setAssetData(dataIs.docs.map((doc) => ({ ...doc.data(), id: doc.id})));
+        };
+
+        getAssets();
+    }, []);
+
     const navigate = useNavigate();
 
     const navigateToAssetDetails = () => {
@@ -31,6 +48,7 @@ export function HomePage() {
 
     return(
             <Box 
+            
             direction="column" 
             background="#FEDB74" 
             scroll="overflow" 
@@ -55,7 +73,8 @@ export function HomePage() {
                     contain
                     align="cneter"
                 >
-                    <RePieChart />
+                    {/* <PieGrommet assetData={assetData}/> */}
+                    <RePieChart assetData={assetData}/>
                     {/* <PieUI /> */}
                 </Box>
                 <Box
@@ -86,7 +105,7 @@ export function HomePage() {
                   
             </Box>
             <Box margin="xsmall" pad="xsmall" round="small" background="">
-                <AssetListTable />
+                <AssetListTable assetData={assetData}/>
             </Box>
             <Box margin={{top:"small", bottom:"large"}}>
                 <Button

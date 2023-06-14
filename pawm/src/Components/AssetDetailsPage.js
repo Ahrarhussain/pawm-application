@@ -55,7 +55,7 @@ export function AssetDetailsPage(){
                         onSubmit={({ value }) => {handleSubmit(value)}}
                     >
                         <FormField name="assetName" htmlFor="text-input-id" label="Asset Name">
-                            <TextInput id="text-input-id" name="assetName" />
+                            <TextInput id="text-input-id" name="assetName" placeholder="Type"/>
                         </FormField>
                         
                         <FormField name="assetType" htmlFor="text-input-id" label="Type">
@@ -63,6 +63,7 @@ export function AssetDetailsPage(){
                                 options={['Physical Asset', 'Shares', 'Crypto']}
                                 name="assetType"
                                 id="text-input-id"
+                                placeholder="Select"
                             />
                             
                         </FormField>
@@ -71,17 +72,18 @@ export function AssetDetailsPage(){
                                 options={['Dark Green', 'Yellow', 'Red']}
                                 name="assetStatus"
                                 id="text-input-id"
+                                placeholder="Status order w.r.t asset order"
                             />
                             
                         </FormField>
                         <FormField name="totalQuantity" htmlFor="number-input-id" label="Total Quantity">
-                            <TextInput id="number-input-id" name="totalQuantity" type="number"/>
+                            <TextInput id="number-input-id" name="totalQuantity" type="number" placeholder="00"/>
                         </FormField>
                         <FormField name="valuePerUnit" htmlFor="number-input-id" label="Unit Value">
-                            <TextInput id="number-input-id" name="valuePerUnit" type="number"/>
+                            <TextInput id="number-input-id" name="valuePerUnit" type="number" placeholder="Rs.00"/>
                         </FormField>
                         <FormField name="assetTotalValue" htmlFor="number-input-id" label="Total Value">
-                            <TextInput id="number-input-id" name="assetTotalValue" type="number"/>
+                            <TextInput id="number-input-id" name="assetTotalValue" type="number" placeholder="Rs.00"/>
                         </FormField>
                         <Box direction="row" gap="medium">
                             <Button type="submit" primary label="Submit" />

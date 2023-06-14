@@ -1,30 +1,73 @@
 import React from 'react';
-import { PieChart, Pie} from 'recharts';
+import { PieChart, Pie, XAxis, YAxis, Cell, Tooltip, Legend, ResponsiveContainer} from 'recharts';
 import grommet from "grommet";
   
-  
-export const RePieChart = () => {
-  
+const COLORS= [
+  "#00739D",
+  "#7630EA",
+  "#FC5A5A",
+  "#0000ff",
+]
+export const RePieChart = ({assetData}) => {
+ 
+let physicalData=0;
+let shareData=0;
+let cryptoData=0;
+let totalData=0;
+assetData.map((item)=> {
+  let x = parseInt(item.assetTotalValue);
+  totalData += x;
+  if(item.assetType === "Shares"){
+    shareData += x;
+  }
+  else if(item.assetType === "Crypto"){
+    cryptoData += x;
+  }
+  else{
+    physicalData +=x;
+  }
+})
+
+console.log(totalData);
+console.log(physicalData);
+console.log(cryptoData);
+
+
 // Sample data
 const data = [
-  {name: 'Geeksforgeeks', students: 400},
-  {name: 'Technical scripter', students: 700},
-  {name: 'Geek-i-knack', students: 200},
-  {name: 'Geek-o-mania', students: 1000}
+  {name: 'Physical Assets', students: physicalData},
+  {name: 'Shares', students: shareData},
+  {name: 'Crypto', students: cryptoData},
 ];
+
   
 return (
-        <PieChart width={350} height={350} margin="large">
-          <Pie 
+    <ResponsiveContainer width="100%" height={400}>
+      <PieChart  margin="large">
+        <Tooltip/>
+        <Legend />
+        <Pie 
           data={data}
-          animationsEnabled="true"
+          cx="50%"
+          cy="50%"
+          isAnimationActive
           dataKey="students" 
           outerRadius={160} 
           innerRadius={90} 
           margin={{left:"large"}}
           align="center"
-          fill="green" />
-          
-        </PieChart>
+          label={true}
+          fill="green">
+          <Tooltip />
+          {data.map((entry,index) => (
+            <Cell 
+              key={`cell-${index}`}
+              fill={COLORS[index % COLORS.length]}
+            />
+          ))}
+        </Pie>
+      </PieChart>
+    </ResponsiveContainer>
+   
 );
 }

@@ -15,11 +15,6 @@ import {
   PageContent,
   Toolbar,
 } from 'grommet';
-import {AssetDataService} from "../Services/asset.services.js";
-
-
-const instanceValue= new AssetDataService();
-
 
 const COLUMNS = [
   { property: 'assetName', header: 'Name', primary: true, pin: true },
@@ -30,50 +25,7 @@ const COLUMNS = [
   { property: 'assetTotalValue', header: 'Value In Asset', align: 'end' },
 ];
 
-//Mock Data Used Earlier...Now realTime data is used.
-// const allData = [
-//   {
-//     assetName: 'Real Estate',
-//     assetType: 'Physical Asset',
-//     assetStatus: 'Stable',
-//     totalQuantity: 37,
-//     valuePerUnit: 123,
-//     assetTotalValue: 47000,  
-//   },
-//   {
-//     assetName: 'Gold',
-//     assetType: 'Physical Asset',
-//     assetStatus: 'Stable',
-//     totalQuantity: 5,
-//     valuePerUnit: 123,
-//     assetTotalValue: 77000,  
-//   },
-//   {
-//     assetName: 'Adhani Power',
-//     assetType: 'Shares',
-//     assetStatus: 'Towards Stability',
-//     totalQuantity: 900,
-//     valuePerUnit: 123,
-//     assetTotalValue: 8000,  
-//   },
-//   {
-//     assetName: 'Ambani Oil',
-//     assetType: 'Shares',
-//     assetStatus: 'Good',
-//     totalQuantity: 1500,
-//     valuePerUnit: 123,
-//     assetTotalValue: 27000,  
-//   },
-//   {
-//     assetName: 'Bitcoin',
-//     assetType: 'Crypto',
-//     assetStatus: 'Bad',
-//     totalQuantity: 100,
-//     valuePerUnit: 123,
-//     assetTotalValue: 170000,  
-//   },
-  
-// ];
+
 
 // Define data structure for DataTableColumns sorting
 const options = COLUMNS.map(({ header, property }) => ({
@@ -98,7 +50,7 @@ const buildProperties = () => {
   return dict;
 };
 
-export const AssetListTable = () => (
+export const AssetListTable = ({assetData}) => (
   <Page background="background" fill round="small" pad="small" scroll="overflow">
     <PageContent>
       <Box gap="medium">
@@ -107,29 +59,20 @@ export const AssetListTable = () => (
             Asset List
           </Heading>
         </Header>
-        <Results />
+        <Results assetData11={assetData}/>
       </Box>
     </PageContent>
   </Page>
 );
 
-const Results = () => {
+const Results = ({assetData11}) => {
   const [select, setSelect] = useState([]);
   const properties = buildProperties();
-  const [assetData, setAssetData] = useState([]);
-
-  useEffect(() => {
-    const getAssets = async () => {
-      const dataIs = await instanceValue.getAllAssets();
-      setAssetData(dataIs.docs.map((doc) => ({ ...doc.data(), id: doc.id})));
-    };
-
-    getAssets();
-  }, []);
   
   return (
-    <Data data={assetData} flex properties={properties}>
+    <Data data={assetData11} flex properties={properties}>
       <Toolbar>
+        {console.log(assetData11)}
         <DataSearch responsive />
         <DataTableColumns drop options={options} />
         <DataFilters layer />
