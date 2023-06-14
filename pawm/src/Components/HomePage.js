@@ -4,11 +4,9 @@ import {User, AddCircle, PieChart, Home} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
 import {AssetListPage} from './AssetListPage';
-import { PieUI } from "./PieUI";
 import {AssetList} from './AssetList'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RePieChart } from "./RePieChart";
-import { PieGrommet } from "./PieGrommet";
 import {AssetListTable} from "./AssetListTable";
 import {HeaderApp} from "./HeaderApp.js";
 import {homepageBackground} from "../Images/homepageBackground.png";
@@ -73,9 +71,7 @@ export function HomePage() {
                     contain
                     align="cneter"
                 >
-                    {/* <PieGrommet assetData={assetData}/> */}
                     <RePieChart assetData={assetData}/>
-                    {/* <PieUI /> */}
                 </Box>
                 <Box
                 

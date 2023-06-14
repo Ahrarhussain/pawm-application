@@ -11,28 +11,25 @@ export function AssetCard(prop) {
     return(
         <>
         {/* {(count == 0) ? ():()} */}
-        <Box direction="row" margin="medium" >
-            <Card  height="small" width="medium" background="light-1">
-                <CardHeader pad="medium">{name}</CardHeader>
-                <CardBody pad="medium">
-                    Status : {status} <br />
-                    Total Value : {totalValue}
-                </CardBody>
-                <CardFooter pad={{horizontal: "small"}} background="light-2">
-                    <Button
-                    icon={<Favorite color="red" />}
-                    hoverIndicator
-                    />
-                    <Button icon={<BarChart color="plain" />} hoverIndicator />
-                    <Button icon={<ShareOption color="plain" />} hoverIndicator />
-                    <Button
-                    icon={<FormTrash color="red" />}
-                    hoverIndicator
-                    />
-                </CardFooter>
-            </Card>
-
-        </Box>
+        <Card background="light-1" flex="grow">
+            <CardHeader pad="medium">{name}</CardHeader>
+            <CardBody pad="medium">
+                Status : {status} <br />
+                Total Value : {totalValue}
+            </CardBody>
+            <CardFooter pad={{horizontal: "small"}} background="light-2">
+                <Button
+                icon={<Favorite color="red" />}
+                hoverIndicator
+                />
+                <Button icon={<BarChart color="plain" />} hoverIndicator />
+                <Button icon={<ShareOption color="plain" />} hoverIndicator />
+                <Button
+                icon={<FormTrash color="red" />}
+                hoverIndicator
+                />
+            </CardFooter>
+        </Card>
         </>
         
     
