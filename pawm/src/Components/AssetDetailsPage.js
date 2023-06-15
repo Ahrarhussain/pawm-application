@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react';
 import {grommet, Notification} from "grommet";
 import {Routes, Route, useNavigate} from 'react-router-dom';
+import { StatusGood,StatusGoodSmall } from 'grommet-icons';
 import {HeaderApp} from "./HeaderApp.js"
 import {AssetDataService} from "../Services/asset.services.js";
 
@@ -18,17 +19,35 @@ import {
   ResponsiveContext,
   Text,
 } from 'grommet';
+import { HomePage } from './HomePage.js';
 
 
 const instanceValue= new AssetDataService();
 
-function handleSubmit(value){
-    //Adding the asset from form to the fireStore Database.
-    instanceValue.addAsset(value);
-    
-}
+
+
 export function AssetDetailsPage(){
     const [value,setValue] = React.useState({});
+    const [visible, setVisible] = React.useState();
+
+    function timeout(delay: Number) {
+        return new Promise( res => setTimeout(res, delay) );
+    }
+
+    async function handleSubmit(value){
+        //Adding the asset from form to the fireStore Database.
+        instanceValue.addAsset(value);
+    
+        // //Toast Notification
+        setVisible(true)
+
+        await timeout(2000);
+    
+        //to refresh
+        window.location.reload(false);
+        
+    }
+
     const headerProp = "Asset Details Page";
     return(
         <Box 
@@ -48,6 +67,18 @@ export function AssetDetailsPage(){
                     pad="small"
                     
                     >
+                    {visible && (
+                        <Notification
+                        toast
+                        size="medium"
+                        icon={<StatusGood color="green" size="medium"/>}
+                        background="white"
+                        style={{color:"black"}}
+                        title="Asset Added!"
+                        message="Form Submitted Successfully"
+                        onClose={() => setVisible(false)}
+                        />
+                    )}
                     <Form
                         value={value}
                         onChange={nextValue => setValue(nextValue)}

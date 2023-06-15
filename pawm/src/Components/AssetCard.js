@@ -9,7 +9,7 @@ export function AssetCard(prop) {
     return(
         <>
         <Card background="light-1" flex="grow" elevation="medium">
-            <CardHeader pad="medium">{name}</CardHeader>
+            <CardHeader pad="medium" background="FFF1E6">{name}</CardHeader>
             <CardBody pad="medium">
                 Status : {status} <br />
                 Total Value : {totalValue}
