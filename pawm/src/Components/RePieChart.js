@@ -4,9 +4,8 @@ import grommet from "grommet";
   
 const COLORS= [
   "#00739D",
-  "#7630EA",
   "#FC5A5A",
-  "#0000ff",
+  "#50C878",
 ]
 export const RePieChart = ({assetData}) => {
  
@@ -52,8 +51,8 @@ return (
           cy="50%"
           isAnimationActive
           dataKey="students" 
-          outerRadius={160} 
-          innerRadius={90} 
+          outerRadius={180} 
+          innerRadius={100} 
           margin={{left:"large"}}
           align="center"
           label={true}

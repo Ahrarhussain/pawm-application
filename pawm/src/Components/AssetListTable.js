@@ -20,9 +20,9 @@ const COLUMNS = [
   { property: 'assetName', header: 'Name', primary: true, pin: true },
   { property: 'assetType', header: 'Category' },
   { property: 'assetStatus', header: 'Status' },
-  { property: 'totalQuantity', header: 'Quantity' },
-  { property: 'valuePerUnit', header: 'Value Per Unit'},
-  { property: 'assetTotalValue', header: 'Value In Asset', align: 'end' },
+  { property: 'totalQuantity', header: 'Quantity (SI)' },
+  { property: 'valuePerUnit', header: 'Value Per Unit (Rs)'},
+  { property: 'assetTotalValue', header: 'Value In Asset (Rs)' },
 ];
 
 
@@ -54,8 +54,8 @@ export const AssetListTable = ({assetData}) => (
   <Page background="background" fill round="small" pad="small" scroll="overflow">
     <PageContent>
       <Box gap="medium">
-        <Header pad={{ top: 'medium',horizontal:"xsmall" }}>
-          <Heading id="users-heading" level={2} margin="none">
+        <Header pad={{horizontal:"xsmall" }} justify="center" align="center" background="black" round="small">
+          <Heading id="users-heading" level={3} margin="none">
             Asset List
           </Heading>
         </Header>

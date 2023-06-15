@@ -6,12 +6,9 @@ export function AssetCard(prop) {
     const name = prop.name;
     const status = prop.status;
     const totalValue = prop.totalValue;
-    const count=prop.count;
-    //count=count % 4;
     return(
         <>
-        {/* {(count == 0) ? ():()} */}
-        <Card background="light-1" flex="grow">
+        <Card background="light-1" flex="grow" elevation="medium">
             <CardHeader pad="medium">{name}</CardHeader>
             <CardBody pad="medium">
                 Status : {status} <br />

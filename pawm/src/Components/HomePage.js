@@ -4,7 +4,6 @@ import {User, AddCircle, PieChart, Home} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
 import {AssetListPage} from './AssetListPage';
-import {AssetList} from './AssetList'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RePieChart } from "./RePieChart";
 import {AssetListTable} from "./AssetListTable";
@@ -100,12 +99,12 @@ export function HomePage() {
                 </Box>
                   
             </Box>
-            <Box margin="xsmall" pad="xsmall" round="small" background="">
+            <Box margin="small" pad="small" round="small" background="">
                 <AssetListTable assetData={assetData}/>
             </Box>
-            <Box margin={{top:"small", bottom:"large"}}>
+            <Box margin={{top:"small", bottom:"large", left:"medium", right:"medium"}}>
                 <Button
-                    label="Asset List"
+                    label="Asset Card and Analytics"
                     onClick = {navigateToAssetListPage}
                     primary
                 />

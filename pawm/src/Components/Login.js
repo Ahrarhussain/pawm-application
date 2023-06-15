@@ -18,7 +18,7 @@ export function Login() {
     if (user) navigate("/dashboard"); // navigate("/dashboard")
   }, [user, loading]);
   return (
-    <div className="login">
+    <div className="login" background="#f8f8ff">
       <div className="login__container">
         <input
           type="text"
