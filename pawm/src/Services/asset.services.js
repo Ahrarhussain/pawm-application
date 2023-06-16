@@ -36,3 +36,4 @@ export class AssetDataService {
         return getDocs(assetDoc);
     }
 }
+
