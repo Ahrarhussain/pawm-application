@@ -1,4 +1,5 @@
 import { db } from '../firebase.config';
+import React from 'react'
 
 import {
     collection,
@@ -10,7 +11,7 @@ import {
 } from 'firebase/firestore';
 
 const assetCollectionRef = collection(db, "assets");
-class AssetDataService {
+export class AssetDataService {
     
     addAsset = (newAsset) => {
         return addDoc(assetCollectionRef, newAsset);
@@ -32,6 +33,7 @@ class AssetDataService {
 
     getAssetById = (id) => {
         const assetDoc = doc(db, "assets", id);
-        return getDoc(assetDoc);
+        return getDocs(assetDoc);
     }
 }
+
