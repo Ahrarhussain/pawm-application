@@ -87,3 +87,6 @@ App will be available at http://localhost:3000
 * [Firebase Docs](https://firebase.google.com/docs)
 
 * [Create React App Docs](https://create-react-app.dev/docs/getting-started/)
+
+## Migration to Newer tech stack:
+* [PAWM Documentation](https://docs.google.com/document/d/1IjvS4F4t7bkBCCBg2MeQfWqNoZn3uUo9y2mqDe6-SbE/edit?usp=sharing)
