@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Card, CardHeader,CardFooter, CardBody, Button} from 'grommet';
+import {Card, CardHeader,CardFooter, CardBody, Button} from 'grommet';
 import {Favorite, ShareOption, BarChart, FormTrash } from "grommet-icons";
 
 export function AssetCard(prop) {

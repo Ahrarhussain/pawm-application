@@ -1,7 +1,6 @@
-import React, { Component, useState } from 'react';
-import {grommet, Notification} from "grommet";
-import {Routes, Route, useNavigate} from 'react-router-dom';
-import { StatusGood,StatusGoodSmall } from 'grommet-icons';
+import React from 'react';
+import { Notification} from "grommet";
+import { StatusGood} from 'grommet-icons';
 import {HeaderApp} from "./HeaderApp.js"
 import {AssetDataService} from "../Services/asset.services.js";
 
@@ -12,19 +11,9 @@ import {
   FormField,
   TextInput,
   Select,
-  List,
-  Header,
-  Menu,
-  PageHeader,
-  ResponsiveContext,
-  Text,
 } from 'grommet';
-import { HomePage } from './HomePage.js';
-
 
 const instanceValue= new AssetDataService();
-
-
 
 export function AssetDetailsPage(){
     const [value,setValue] = React.useState({});

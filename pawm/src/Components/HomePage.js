@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
-import {Box,Page, Text, Header, Button, Image,Menu} from "grommet";
-import {User, AddCircle, PieChart, Home} from "grommet-icons";
+import {Box, Button} from "grommet";
+import {AddCircle} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import {AssetDetailsPage} from './AssetDetailsPage';
 import {AssetListPage} from './AssetListPage';
@@ -37,10 +37,10 @@ export function HomePage() {
         // 👇️ navigate to /AssetDetails
         navigate('/AssetListPage');
     };
-    const navigateHome = () => {
-        // 👇️ navigate to /
-        navigate('/');
-      };
+    // const navigateHome = () => {
+    //     // 👇️ navigate to /
+    //     navigate('/');
+    //   };
     let headerProp = 'Home Page';
 
     return(
