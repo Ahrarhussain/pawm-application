@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";    //Write React outside the brackets, had an error for that.
-import {HeaderApp} from "./HeaderApp";
+import {HeaderApp} from "./HeaderApp.js";
 import {Box,Grid} from "grommet";
-import { AssetCard } from "./AssetCard";
-import {AssetDataService} from "../Services/asset.services.js";
+import { AssetCard } from "./AssetCard.js";
+import {AssetDataService} from "../services/asset.services.js";
 
 
 const elementInstance= new AssetDataService();

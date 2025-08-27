@@ -2,7 +2,7 @@ import React from 'react';
 import { Notification} from "grommet";
 import { StatusGood} from 'grommet-icons';
 import {HeaderApp} from "./HeaderApp.js"
-import {AssetDataService} from "../Services/asset.services.js";
+import {AssetDataService} from "../services/asset.services.js";
 
 import {
   Box,

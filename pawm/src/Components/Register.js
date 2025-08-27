@@ -6,7 +6,7 @@ import {
   registerWithEmailAndPassword,
   signInWithGoogle,
 } from "../firebase.config";
-import "../Styles/Register.css";
+import "../styles/Register.css";
 
 
 export function Register() {

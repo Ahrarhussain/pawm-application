@@ -27,10 +27,7 @@ export function AssetCard(prop) {
                 />
             </CardFooter>
         </Card>
-        </>
-        
-    
-        
+        </>        
     );
 }
 

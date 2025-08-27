@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase.config";
 import { sendPasswordResetEmail } from "firebase/auth";
-import "../Styles/Reset.css";
+import "../styles/Reset.css";
 
 
 export function Reset() {

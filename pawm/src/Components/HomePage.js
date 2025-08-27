@@ -2,15 +2,15 @@ import React, {useState, useEffect} from "react";
 import {Box, Button} from "grommet";
 import {AddCircle} from "grommet-icons";
 import {Routes, Route, useNavigate} from 'react-router-dom';
-import {AssetDetailsPage} from './AssetDetailsPage';
-import {AssetListPage} from './AssetListPage';
+import {AssetDetailsPage} from './AssetDetailsPage.js';
+import {AssetListPage} from './AssetListPage.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { RePieChart } from "./RePieChart";
-import {AssetListTable} from "./AssetListTable";
+import { RePieChart } from "./RePieChart.js";
+import {AssetListTable} from "./AssetListTable.js";
 import {HeaderApp} from "./HeaderApp.js";
-import {homepageBackground} from "../Images/homepageBackground.png";
+import {homepageBackground} from "../images/homepageBackground.png";
 
-import {AssetDataService} from "../Services/asset.services.js";
+import {AssetDataService} from "../services/asset.services.js";
 
 
 const instanceValue= new AssetDataService();
