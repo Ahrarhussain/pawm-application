@@ -1,8 +1,7 @@
 import React from "react";
-import {Box,Page, Text, Header, Button, Image,Menu} from "grommet";
-import {Routes, Route, useNavigate} from 'react-router-dom';
-import {User, AddCircle, PieChart, Home} from "grommet-icons";
-import { auth, db, logout } from "../firebase.config";   //for adding logout functionality
+import {Box,Text, Header, Button, Menu} from "grommet";
+import {User, Home} from "grommet-icons";
+// import { auth, db, logout } from "../firebase.config";   //for adding logout functionality
 
 export function HeaderApp (prop){
     const headerValue = prop.headerProp;

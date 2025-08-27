@@ -1,6 +1,5 @@
 import React from 'react';
-import { PieChart, Pie, XAxis, YAxis, Cell, Tooltip, Legend, ResponsiveContainer} from 'recharts';
-import grommet from "grommet";
+import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer} from 'recharts';
   
 const COLORS= [
   "#00739D",
