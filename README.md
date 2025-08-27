@@ -1,82 +1,89 @@
-🐾 PAWM - Personal Asset & Wealth Management
-A React + Firebase application for managing shares, cryptocurrencies, and physical assets in one place.
+# 🐾 PAWM - Personal Asset & Wealth Management
+A **React + Firebase** application for managing shares, cryptocurrencies, and physical assets in one place.
 It provides intuitive visualizations (donut charts, tables, icons) to help users monitor and analyze their portfolio with ease.
 
-📖 About the Application
+## 📖 About the Application
 The Personal Asset & Wealth Management (PAWM) app acts as a centralized portfolio tracker.
 
-Manage assets across stocks, crypto, and physical items
+* Manage assets across stocks, crypto, and physical items.
 
-Visualize your holdings using charts & tables
+* Visualize your holdings using charts & tables.
 
-Access insights with a clean and responsive UI
+* Access insights with a clean and responsive UI.
 
-Built for both novice and experienced investors
+* Built for both novice and experienced investors.
 
-✨ Features
-✅ Track multiple asset classes (stocks, crypto, physical assets)
+## ✨ Features
+* ✅ Track multiple asset classes (stocks, crypto, physical assets).
 
-✅ Interactive charts & tables for visualization
+* ✅ Interactive charts & tables for visualization.
 
-✅ Firebase-powered authentication & secure data storage
+* ✅ Firebase-powered authentication & secure data storage.
 
-✅ Responsive design for a seamless experience
+* ✅ Responsive design for a seamless experience.
 
-🛠 Tech Stack
-Frontend: ReactJS (Create React App)
+## 🛠 Tech Stack
+* Frontend: ReactJS (Create React App).
 
-Backend / Database: Firebase (Auth + Firestore)
+* Backend / Database: Firebase (Auth + Firestore).
 
-Visualization: Donut graphs, tables
+* Visualization: Donut graphs, tables.
 
-Environment Configuration: .env.local
+* Environment Configuration: .env.local.
 
-🚀 Getting Started
+## 🚀 Getting Started
 1️⃣ Clone the Repository
-bash
+```bash
 git clone https://github.com/your-username/pawm-application.git
-cd pawm-application
+cd pawm-application 
+```
+
 2️⃣ Install Dependencies
-bash
+```bash
 npm install
+```
+
 3️⃣ Setup Firebase
-Create a Firebase project in the Firebase Console
+* Create a Firebase project in the Firebase Console
 
-Enable Authentication and Firestore Database
+* Enable Authentication and Firestore Database
 
-Add your Firebase config inside a .env.local file:
+* Add your Firebase config inside a .env.local file:
 
-text
+```text
 REACT_APP_FIREBASE_API_KEY=your_api_key
 REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+```
+
 4️⃣ Run the Application
-bash
+```bash
 npm start
+```
 App will be available at http://localhost:3000
 
-📜 Available Scripts
-npm start → Run in development mode
+## 📜 Available Scripts
 
-npm test → Launch test runner in watch mode
+* npm start → Run in development mode
 
-npm run build → Create production build (optimized + minified)
+* npm test → Launch test runner in watch mode
 
-npm run eject → Eject CRA for full config control (not reversible)
+* npm run build → Create production build (optimized + minified)
 
-🔮 Future Roadmap
-📊 Prediction graphs for historical asset analysis
+* npm run eject → Eject CRA for full config control (not reversible)
 
-📉 Advanced market indicators and insights
+## 🔮 Future Roadmap
+* 📊 Prediction graphs for historical asset analysis
 
-📱 Mobile-optimized version
+* 📉 Advanced market indicators and insights
 
-🌍 Support for multiple portfolios
+* 📱 Mobile-optimized version
 
-📚 Learn More
-React Documentation
+* 🌍 Support for multiple portfolios
 
-Firebase Docs
+## 📚 Learn More
+* [React Documentation](https://react.dev/)
 
-Create React App Docs
+* [Firebase Docs](https://firebase.google.com/docs)
 
+* [Create React App Docs](https://create-react-app.dev/docs/getting-started/)
